@@ -31,11 +31,10 @@ export function removeComment(id) {
     }
 }
 
-export function thumbUp(votes, id) {
+export function thumbUp(commentId) {
 	return {
 		type: THUMB_UP,
-		votes: votes +1,
-		id
+		id: commentId
 	}
 }
 

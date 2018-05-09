@@ -18,15 +18,15 @@ function comments(state = [], action) {
                 text: action.text,
                 votes: 0
             },
-            ...state.comments];
+            ...state];
     	case REMOVE_COMMENT:
-    		return comments; state.comments.filter(comment => comment.id !== action.id)
+    		return state.filter(comment => comment.id !== action.id)
     	case EDIT_COMMENT:
-    		return comments; state.comments.map(comment => (comment.id === action.id ? {...comment, text: action.text} : comment))
+    		return state.map(comment => (comment.id === action.id ? {...comment, text: action.text} : comment))
     	case THUMB_UP:
-    		return comments; state.comments.map(comment => (comment.id === action.id ? {...comment, votes: comment.votes +1} : comment))
+    		return state.map(comment => (comment.id === action.id ? {...comment, votes: comment.votes +1} : comment))
 		case THUMB_DOWN:
-			return comments; state.comments.map(comment => (comment.id === action.id ? {...comment, votes: comment.votes -1} : comment))
+			return state.map(comment => (comment.id === action.id ? {...comment, votes: comment.votes -1} : comment))
     	default: 
     		return state;
 
