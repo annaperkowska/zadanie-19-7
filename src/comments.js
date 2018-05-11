@@ -1,13 +1,8 @@
-import {ADD_COMMENT} from './action'
-import {EDIT_COMMENT} from './action'
-import {REMOVE_COMMENT} from './action'
-import {THUMB_UP} from './action'
-import {THUMB_DOWN} from './action'
-
-const initialState = {
-    comments: [],
-    users: []
-};
+import {ADD_COMMENT} from './action';
+import {EDIT_COMMENT} from './action';
+import {REMOVE_COMMENT} from './action';
+import {THUMB_UP} from './action';
+import {THUMB_DOWN} from './action';
 
 
 function comments(state = [], action) {

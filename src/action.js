@@ -26,22 +26,21 @@ export function editComment(text, id) {
 
 export function removeComment(id) {
     return {
-        type: ADD_COMMENT,
+        type: REMOVE_COMMENT,
         id
     }
 }
 
-export function thumbUp(commentId) {
+export function thumbUp(id) {
 	return {
 		type: THUMB_UP,
-		id: commentId
+		id
 	}
 }
 
 export function thumbDown(votes, id) {
 	return {
 		type: THUMB_DOWN,
-		votes: votes -1,
 		id
 	}
 }
