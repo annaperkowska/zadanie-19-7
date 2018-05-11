@@ -38,7 +38,7 @@ export function thumbUp(id) {
 	}
 }
 
-export function thumbDown(votes, id) {
+export function thumbDown(id) {
 	return {
 		type: THUMB_DOWN,
 		id
